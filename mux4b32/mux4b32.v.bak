@@ -1,0 +1,12 @@
+module mux4b32(
+	input[31:0] in0,
+	input[31:0] in1,
+	input[31:0]	in2,
+	input[31:0] in3,
+	input c0, c1,
+	output[31:0] out
+);
+	
+	assign out = (c1 == 0)? ((c0 == 0)? in0 :in1) :  ((c0 == 0)? in2 :in3);
+
+endmodule

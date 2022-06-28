@@ -1,0 +1,26 @@
+module MemDados(
+	// IN
+	input [31:0] AM,	// Endereço
+	input [31:0] DM_,	// Dado de escrita
+	input EW,			// Sinal para escrita
+	
+	// OUT
+	output[31:0] DM,	// Dado de leitura
+	
+	// TIMER
+	input clk			// clock
+)
+
+	reg[31:0] mem_d[31:0];	// Memoria de fato
+	
+	
+	always @(posedge clk) begin
+	
+		if (EW == 1'b1)		// Escrita habilitada
+			mem_d[DM_] <= AM;
+			
+	end
+	
+	assign DM = mem_d[AM];	// saída
+
+endmodule

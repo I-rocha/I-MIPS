@@ -1,0 +1,42 @@
+module interfaceGeral(
+	// IN
+	input[4:0] t_ra1,       // Teste endereco r1
+	input[4:0] t_ra2,       // Teste endereco r2
+	input[4:0] uc_aluop,     // Teste do aluop
+		
+	// OUT	
+	output[31:0] t_dr1,   // Teste saida ULA
+	output CFL,           // Dado armazenado em flag
+	
+	// TIMER
+	input clk             // Clock
+);
+
+	wire[31:0] br;
+	wire[31:0] br_dr1, br_dr2;
+	
+	// TEST_UC
+//	reg[4:0] uc_aluop;
+	reg[1:0] uc_ew;
+	
+	
+	// ONLY TEST BR
+	reg[31:0] t_dr1_;
+	reg[31:0] t_dj;
+	reg t_df;
+	wire t_cfl;
+	
+	// ONLY TEST ULASreg t_cfl;
+	reg[4:0] t_smt;
+	wire ulas_uf;
+	
+//	initial begin
+		//t_ra1 =	5'b00001;
+		//t_ra2 = 	5'b00010;
+		//uc_aluop = 5'b00001;
+//	end
+
+	BR(.DR1_(t_dr1_), .DJ(t_dj), .RA1(t_ra1), .RA2(t_ra2), .EW(uc_ew), .DF(t_df), .DR1(br_dr1), .DR2(br_dr2), .CFL(t_cfl), .clk(clk));
+	ULAS( .op1(br_dr1), .op2(br_dr2), .smt(t_smt), .aluop(uc_aluop), .r1(t_dr1), .UF(ulas_uf));
+	
+endmodule

@@ -1,0 +1,36 @@
+module BR(
+	// IN
+	input[ 4:0] RA1, RA2,		// Endereços reg 1 e 2
+	input[31:0] DR1_,				// Dado para escrita
+	input[ 1:0] EW,				// Sinal de escrita
+	input DF,						// Data Flag
+	input DJ,						// Data Jump
+	
+	// OUT	
+	output reg[31:0] DR1, DR2,	// Dado reg 1 e 2
+	output CFL,						// Dado armazenado em flag
+	
+	// TIMER
+	input clk						// Clock
+);
+
+	// REGISTRADORES
+	reg[32:0] register[31:0] // 33x32 regs
+	
+	
+	
+	always @(posedge clk) begin
+		case(EW) begin
+		// 2'b00 : Nao escrever nada
+			2'b01 : // Escrever df no endereco af
+			2'b10 : // Escrever dj no endereço aj
+			2'b11 : // Escrever DR1_ em RA1
+		endcase
+		
+		
+		// Repassa dados dos regs
+		DR1 <= register[RA1];
+		DR2 <= register[RA2];
+	end
+
+endmodule

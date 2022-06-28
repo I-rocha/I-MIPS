@@ -1,0 +1,15 @@
+module MemInstrucao(
+	// IN
+	input[31:0] I,		// Endereço instrução
+	
+	// OUT
+	output[31:0] ID,	// Instrução
+	
+	);
+	
+	
+	reg[31:0] memoria[31:0];	// Memoria de fato
+	
+	assign ID = memoria[I];		// Repassa dado do endereço I
+	
+endmodule
