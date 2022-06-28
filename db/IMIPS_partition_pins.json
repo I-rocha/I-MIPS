@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "regw[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regw[1]",
+					"strict" : false
+				},
+				{
+					"name" : "immop",
+					"strict" : false
+				},
+				{
+					"name" : "dataop",
+					"strict" : false
+				},
+				{
+					"name" : "datast",
+					"strict" : false
+				},
+				{
+					"name" : "aluop[0]",
+					"strict" : false
+				},
+				{
+					"name" : "aluop[1]",
+					"strict" : false
+				},
+				{
+					"name" : "aluop[2]",
+					"strict" : false
+				},
+				{
+					"name" : "aluop[3]",
+					"strict" : false
+				},
+				{
+					"name" : "memw",
+					"strict" : false
+				},
+				{
+					"name" : "cond",
+					"strict" : false
+				},
+				{
+					"name" : "jump",
+					"strict" : false
+				},
+				{
+					"name" : "branch",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[4]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[5]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[1]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "funct[0]",
+					"strict" : false
+				},
+				{
+					"name" : "funct[1]",
+					"strict" : false
+				},
+				{
+					"name" : "funct[2]",
+					"strict" : false
+				},
+				{
+					"name" : "funct[3]",
+					"strict" : false
+				},
+				{
+					"name" : "funct[4]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
